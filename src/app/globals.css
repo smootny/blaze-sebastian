@@ -31,6 +31,51 @@ body {
   line-height: 1.4;
   font-weight: 300;
 }
+@media (max-width: 768px) {
+  .glass {
+    padding: 0.5rem;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .face-icon-container {
+    position: absolute !important;
+  }
+  .hero-section, .phone-copy-rights {
+    padding-top: 0 !important;
+  }
+  .text-container {
+    gap: 1rem !important; 
+  }
+  .phone-container {
+    max-width: 62% !important;
+  }
+  .border-gif {
+    border-radius: 30px !important;
+  }
+  .phone-font {
+    font-size: 1.5rem !important;
+  }
+  .phone-description {
+    font-size: 1rem !important;
+  }
+  h1 code {
+    font-size: 2rem !important;
+  }
+  .phone-paragraph {
+    margin-top: 1rem !important;
+  }
+  .skills-container {
+    padding-bottom: 0 !important;
+  }
+  .icon-container {
+    flex-wrap: nowrap !important;
+    height: 7rem !important;
+  }
+}
 
 .box {
   width: 300px;
@@ -171,6 +216,10 @@ background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%)
   background: linear-gradient(270deg, rgba(60, 60, 60, 1) 11%, rgba(34, 42, 45, 1) 100%);
 }
 
+.border-gif {
+  border-radius: 60px;
+  border: 1px pink solid;
+}
 
 .container {
   width: 400%;

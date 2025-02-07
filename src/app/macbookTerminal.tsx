@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
 
 type SkillCategory = "Languages" | "Frameworks" | "Libraries" | "Tools & DevOps" | "Version Control" | "Others";
 
@@ -24,7 +25,6 @@ const skills: Record<SkillCategory, Skill[]> = {
   "Libraries": [
     { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
     { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-    { name: "Angular Material", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg" },
     { name: "NgRx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ngrx/ngrx-original.svg" },
     { name: "RxJs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-original.svg" },
   ],
@@ -50,33 +50,49 @@ const skills: Record<SkillCategory, Skill[]> = {
 
 export default function MacbookTerminal() {
   const [activeTab, setActiveTab] = useState<SkillCategory>("Languages");
+  const skillsIconsRef = useRef(null);
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      gsap.fromTo(
+        skillsIconsRef.current,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, [activeTab]);
 
   return (
     <div className="w-full h-full max-h-1/2 max-w-5xl bg-gray-900 text-white rounded-lg shadow-lg p-4">
 
 
-      <div className="flex justify-around bg-gray-700 p-2 rounded-t-md glass font-orbitron">
-        {Object.keys(skills).map((category) => (
-          <button
-            key={category}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              activeTab === category ? "text-white border-b-2 border-blue-400" : "text-gray-400 hover:text-white"
-            }`}
-            onClick={() => setActiveTab(category as SkillCategory)} 
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+<div className="flex flex-wrap md:flex-nowrap justify-around bg-gray-700 p-2 rounded-t-md glass font-orbitron">
+  {Object.keys(skills).map((category) => (
+    <button
+      key={category}
+      className={`px-2 py-2 text-sm font-medium transition-colors w-full md:w-auto text-center ${
+        activeTab === category ? "text-white border-b-2 border-blue-400" : "text-gray-400 hover:text-white"
+      }`}
+      onClick={() => setActiveTab(category as SkillCategory)} 
+    >
+      {category}
+    </button>
+  ))}
+</div>
 
-      <div className="p-6 h-64 flex justify-around gap-6 text-center items-center">
-        {skills[activeTab].map((skill) => (
-          <div key={skill.name} className="flex flex-col items-center">
-            <Image src={skill.icon} alt={skill.name} width={50} height={50} />
-            <p className="mt-2 text-md font-orbitron">{skill.name}</p>
-          </div>
-        ))}
-      </div>
+<div className="p-6 h-auto md:h-64 flex justify-around justify-center gap-4 text-center items-center icon-container" ref={skillsIconsRef}>
+  {skills[activeTab].map((skill) => (
+    <div key={skill.name} className="flex flex-col items-center w-1/3 md:w-auto">
+      <Image src={skill.icon} alt={skill.name} width={40} height={40} className="w-10 md:w-12"/>
+      <p className="mt-2 text-xs md:text-md font-orbitron">{skill.name}</p>
+    </div>
+  ))}
+</div>
     </div>
   );
 }

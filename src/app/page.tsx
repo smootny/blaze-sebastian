@@ -9,10 +9,25 @@ import MacbookTerminal from "./macbookTerminal";
 export default function Page() {
   const containerRef = useRef(null);
   const [isDownloaded, setIsDownloaded] = useState(false);
+  const socialIconsRef = useRef(null);
 
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      socialIconsRef.current,
+      { scale: 1, rotation: 0 },
+      {
+        scale: 1.2,
+        rotation: 5,
+        yoyo: true,
+        repeat: 3,
+        duration: 0.2,
+        ease: "power1.inOut",
+        stagger: 0.15,
+      }
+    );
 
     const sections = gsap.utils.toArray(".panel");
 
@@ -61,18 +76,18 @@ export default function Page() {
             <code className="font-alumni">FRONTEND DEVELOPER</code>
           </h1>
 
-          <p>
+          <p className="phone-paragraph">
           I am an indie front-end developer trying to solve my daily problems with projects I build.
           </p>
            
-        <div className="tech-stack flex items-center justify-center py-6">
+        <div className="tech-stack flex items-center justify-center py-6" ref={socialIconsRef}>
   <a href="https://www.linkedin.com/in/sebastian-b%C5%82a%C5%BCejewski/" target="_blank" rel="noopener noreferrer">
     <Image 
       src="/linkedin.png" 
       alt="LinkedIn Profile"
       width={40}
       height={40}
-      className="tech-icon transition-transform hover:scale-110"
+      className="tech-icon transition-transform hover:scale-110 animate-fadeInUp"
     />
   </a>
 
@@ -82,7 +97,7 @@ export default function Page() {
       alt="GitHub Profile" 
       width={40}
       height={40}
-      className="tech-icon transition-transform hover:scale-110"
+      className="tech-icon transition-transform hover:scale-110 animate-fadeInUp"
     />
   </a>
 
@@ -92,7 +107,7 @@ export default function Page() {
       alt="Twitter Profile"
       width={40}
       height={40}
-      className="tech-icon transition-transform hover:scale-110"
+      className="tech-icon transition-transform hover:scale-110 animate-fadeInUp"
     />
   </a>
       </div>
@@ -106,11 +121,11 @@ export default function Page() {
   <section className="panel project1 flex items-center justify-center p-10">
   <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
     
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
       
-      <h2 className="font-orbitron text-white text-3xl">Gaweloft Interiors</h2>
+      <h2 className="font-orbitron text-white text-4xl phone-font">Gaweloft Interiors</h2>
       
-      <code className="font-alumni text-black text-2xl font-bold">
+      <code className="font-alumni text-black text-2xl font-bold phone-description">
         Gaweloft - interior designer landing page for portfolio.
       </code>
 
@@ -119,36 +134,43 @@ export default function Page() {
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
           alt="JavaScript"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
           alt="HTML5" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
           alt="CSS3"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
+       
       </div>
+      <div className="flex justify-center items-center gap-4 py-6">
+      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/gaweloft" target="_blank" rel="noopener noreferrer">
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/code1.png" alt="Code Button"  width={35}
+          height={35}/></a>
+      </div>    
+      
     </div>
 
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gaweloft.gif"
+        src="/gaweloft_page.gif"
         alt="Drugi projekt"
-        width={400}
+        width={350}
         height={300}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg border-gif"
       />
     </div>
   </div>
@@ -158,10 +180,10 @@ export default function Page() {
 <section className="panel project2 flex items-center justify-center p-10">
   <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
     
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2">
-      <h2 className="font-orbitron text-white text-3xl">Who Pays?!</h2>
+    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
+      <h2 className="font-orbitron text-white text-4xl phone-font">Who Pays?!</h2>
       
-      <code className="font-alumni text-black text-2xl font-bold">
+      <code className="font-alumni text-black text-2xl font-bold phone-description">
       Who Pays?! - a fun decision-making game.
       </code>
 
@@ -170,36 +192,42 @@ export default function Page() {
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
           alt="React" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
           alt="HTML5" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
           alt="CSS3"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
+      
       </div>
+      <div className="flex justify-center items-center gap-4 py-6">
+      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/WhoPays" target="_blank" rel="noopener noreferrer">
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/code1.png" alt="Code Button"  width={35}
+          height={35}/></a>
+      </div>    
     </div>
 
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gaweloft.gif"
+        src="/who_pays.gif"
         alt="Drugi projekt"
-        width={400}
+        width={350}
         height={300}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg border-gif"
       />
     </div>
   </div>
@@ -210,11 +238,11 @@ export default function Page() {
 <section className="panel project3 flex items-center justify-center p-10">
   <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
     
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
 
-      <h2 className="font-orbitron text-white text-3xl">Trening Tools</h2>
+      <h2 className="font-orbitron text-white text-4xl phone-font">Trening Tools</h2>
       
-      <code className="font-alumni text-black text-2xl font-bold">
+      <code className="font-alumni text-black text-2xl font-bold phone-description">
       Trening Tools - simple tools for daily training and diet use.
       </code>
 
@@ -223,44 +251,50 @@ export default function Page() {
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
           alt="Angular" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" 
           alt="HTML5" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
 
          <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
           alt="HTML5" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
           alt="CSS3"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
+     
       </div>
+      <div className="flex justify-center items-center gap-4 py-6">
+      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/FlexFlowFreeze" target="_blank" rel="noopener noreferrer">
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/code1.png" alt="Code Button"  width={35}
+          height={35}/></a>
+      </div>    
     </div>
 
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gaweloft.gif"
+        src="/flex_flow_freeze.gif"
         alt="Drugi projekt"
-        width={400}
+        width={350}
         height={300}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg border-gif"
       />
     </div>
   </div>
@@ -269,49 +303,56 @@ export default function Page() {
 <section className="panel project4 flex items-center justify-center p-10">
   <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
     
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
 
-      <h2 className="font-orbitron text-white text-3xl">Gaweloft Interiors</h2>
+      <h2 className="font-orbitron text-white text-4xl phone-font">Trap Player</h2>
       
-      <code className="font-alumni text-black text-2xl font-bold">
-        Gaweloft - interior designer landing page for portfolio.
+      <code className="font-alumni text-black text-2xl font-bold phone-description">
+        Trap Player - Simple Ipod Classic design.
       </code>
 
       <div className="tech-stack flex items-center gap-4">
         
         <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
           alt="React" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
           alt="HTML5" 
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
         
         <Image 
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
           alt="CSS3"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="tech-icon"
         />
+         
+       
       </div>
+      <div className="flex justify-center items-center gap-4 py-6">
+      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/TrapPlayer" target="_blank" rel="noopener noreferrer">
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/code1.png" alt="Code Button"  width={35}
+          height={35}/></a>
+      </div>    
     </div>
 
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gaweloft.gif"
+        src="/trap_player.gif"
         alt="Drugi projekt"
-        width={400}
+        width={350}
         height={300}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg border-gif"
       />
     </div>
   </div>
@@ -321,7 +362,7 @@ export default function Page() {
 
       <div className="final flex flex-col items-end text-center gap-6 p-10">
 
-  <div className="flex flex-col items-center text-center space-y-6 py-10 gap-6">
+  <div className="flex flex-col items-center text-center space-y-6 py-10 gap-6 skills-container">
 
   <h1 className="font-orbitron text-4xl text-white">My Skills?</h1>
 
@@ -329,7 +370,7 @@ export default function Page() {
     <MacbookTerminal />
   </div>
 
- <div className="fixed top-4 left-4 z-50 flex items-center">
+ <div className="fixed top-4 left-4 z-50 flex items-center face-icon-container">
   <Image 
     src="/face.svg"
     alt="Profile Icon"
@@ -353,7 +394,7 @@ export default function Page() {
 
   
   <p>Feel free to reach me out, you can download my resume in the left top corner! See you! 🤞</p>
-  <p className="font-alumni text-gray-400 py-4 text-sm">
+  <p className="font-alumni text-gray-400 py-4 text-md phone-copy-rights">
     &copy; 2025 Sebastian Blaze. <br />
     <code className="font-alumni">All rights reserved.</code>
   </p>
