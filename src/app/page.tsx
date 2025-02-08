@@ -76,7 +76,7 @@ export default function Page() {
         <div className="tech-stack flex items-center justify-center py-6" ref={socialIconsRef}>
   <a href="https://www.linkedin.com/in/sebastian-b%C5%82a%C5%BCejewski/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/images/linkedin.png" 
+      src="/myspace/images/linkedin.png" 
       alt="LinkedIn Profile"
       width={40}
       height={40}
@@ -86,7 +86,7 @@ export default function Page() {
 
   <a href="https://github.com/smootny/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/images/github.png" 
+      src="/myspace/images/github.png" 
       alt="GitHub Profile" 
       width={40}
       height={40}
@@ -96,7 +96,7 @@ export default function Page() {
 
   <a href="https://x.com/blazejewski_dev" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/images/twitter.png" 
+      src="/myspace/images/twitter.png" 
       alt="Twitter Profile"
       width={40}
       height={40}
@@ -140,13 +140,13 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center gap-4 py-6">
       <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/gaweloft" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/images/code.png" alt="Code Button"  width={35}
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/myspace/images/code.png" alt="Code Button"  width={35}
           height={35}/></a>
       </div>    
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gifs/gaweloft_page.gif"
+        src="/myspace/gifs/gaweloft_page.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
@@ -187,13 +187,13 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center gap-4 py-6">
       <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/WhoPays" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/images/code.png" alt="Code Button"  width={35}
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/myspace/images/code.png" alt="Code Button"  width={35}
           height={35}/></a>
       </div>    
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gifs/who_pays.gif"
+        src="/myspace/gifs/who_pays.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
@@ -241,13 +241,13 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center gap-4 py-6">
       <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/FlexFlowFreeze" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/images/code.png" alt="Code Button"  width={35}
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/myspace/images/code.png" alt="Code Button"  width={35}
           height={35}/></a>
       </div>    
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gifs/flex_flow_freeze.gif"
+        src="/myspace/gifs/flex_flow_freeze.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
@@ -288,13 +288,13 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center gap-4 py-6">
       <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/TrapPlayer" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/images/code.png" alt="Code Button"  width={35}
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/myspace/images/code.png" alt="Code Button"  width={35}
           height={35}/></a>
       </div>    
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/gifs/trap_player.gif"
+        src="/myspace/gifs/trap_player.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
@@ -313,7 +313,7 @@ export default function Page() {
   </div>
  <div className="fixed top-4 left-4 z-50 flex items-center face-icon-container">
   <Image 
-    src="/images/face.svg"
+    src="/myspace/images/face.svg"
     alt="Profile Icon"
     width={50}
     height={50}
@@ -323,7 +323,7 @@ export default function Page() {
           {isDownloaded ? (
             <p className="text-white font-semibold px-6 py-2">Thank you! 😊 🤙</p>
           ) : (
-            <a href="/files/sebastian_blazejewski.pdf" target="_blank" download onClick={() => setIsDownloaded(true)}>
+            <a href="/myspace/files/sebastian_blazejewski.pdf" target="_blank" download onClick={() => setIsDownloaded(true)}>
               <button className="glass text-black border border-gray-800 px-4 py-2 uppercase rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r from-black to-black shadow-lg hover:text-white">
                 Download CV 📄
               </button>
