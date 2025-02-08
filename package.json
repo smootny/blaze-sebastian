@@ -9,8 +9,6 @@
     "lint": "next lint",
     "export": "next export",
     "deploy": "next build && next export && gh-pages -d out"
-}
-
   },
   "dependencies": {
     "gsap": "^3.12.7",
