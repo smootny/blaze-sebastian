@@ -76,7 +76,7 @@ export default function Page() {
         <div className="tech-stack flex items-center justify-center py-6" ref={socialIconsRef}>
   <a href="https://www.linkedin.com/in/sebastian-b%C5%82a%C5%BCejewski/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/assets/images/linkedin.png" 
+      src="blaze-sebastian/assets/images/linkedin.png" 
       alt="LinkedIn Profile"
       width={40}
       height={40}
@@ -86,7 +86,7 @@ export default function Page() {
 
   <a href="https://github.com/smootny/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/assets/images/github.png" 
+      src="/blaze-sebastian/assets/images/github.png" 
       alt="GitHub Profile" 
       width={40}
       height={40}
@@ -96,7 +96,7 @@ export default function Page() {
 
   <a href="https://x.com/blazejewski_dev" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="/assets/images/twitter.png" 
+      src="/blaze-sebastian/public/assets/images/twitter.png" 
       alt="Twitter Profile"
       width={40}
       height={40}
@@ -146,7 +146,7 @@ export default function Page() {
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/assets/gifs/gaweloft_page.gif"
+        src="/public/assets/gifs/gaweloft_page.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
@@ -187,13 +187,13 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center gap-4 py-6">
       <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/WhoPays" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="/assets/images/code.png" alt="Code Button"  width={35}
+      <Image className="code-img tech-icon transition-transform hover:scale-110" src="public/assets/images/code.png" alt="Code Button"  width={35}
           height={35}/></a>
       </div>    
     </div>
     <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
       <Image
-        src="/assets/gifs/who_pays.gif"
+        src="assets/gifs/who_pays.gif"
         alt="Drugi projekt"
         width={350}
         height={300}
