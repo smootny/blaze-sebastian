@@ -95,10 +95,6 @@ h2 {
   padding-top: 10rem;
 }
 
-.description {
-  display: flex;
-}
-
 .glass {
   background: rgba( 255, 255, 255, 0.15 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -113,7 +109,7 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  min-height: 92vh;
+  min-height: 96vh;
   background: rgb(60,60,60);
   background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%);
 }
