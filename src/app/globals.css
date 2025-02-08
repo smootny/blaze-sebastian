@@ -15,66 +15,12 @@
   }
 } 
 
-.glass {
-  background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
 body {
   background-color: #222;
   color: #ddd;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
-}
-@media (max-width: 768px) {
-  .glass {
-    padding: 0.5rem;
-  }
-
-  .tech-stack {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-  .face-icon-container {
-    position: absolute !important;
-  }
-  .hero-section, .phone-copy-rights {
-    padding-top: 0 !important;
-  }
-  .text-container {
-    gap: 1rem !important; 
-  }
-  .phone-container {
-    max-width: 62% !important;
-  }
-  .border-gif {
-    border-radius: 30px !important;
-  }
-  .phone-font {
-    font-size: 1.5rem !important;
-  }
-  .phone-description {
-    font-size: 1rem !important;
-  }
-  h1 code {
-    font-size: 2rem !important;
-  }
-  .phone-paragraph {
-    margin-top: 1rem !important;
-  }
-  .skills-container {
-    padding-bottom: 0 !important;
-  }
-  .icon-container {
-    flex-wrap: nowrap !important;
-    height: 7rem !important;
-  }
 }
 
 .box {
@@ -108,15 +54,6 @@ h2 {
   font-weight: 400;
   margin-bottom: 0;
   font-size: 2rem;
-}
-
-.panel pre.prettyprint {
-  font-size: 20px;
-  text-align: left;
-  width: auto;
-  font-weight: normal;
-  margin: 10px;
-  border: none;
 }
 
 .project1 {
@@ -160,39 +97,15 @@ h2 {
 
 .description {
   display: flex;
-
-}
-.prettyprint .linenums {
-  padding: 0;
-  list-style: none;
 }
 
-.prettyprint ol li {
-  background-color: black;
-}
-
-.panel.red .prettyprint .linenums > li:nth-child(n + 7):nth-child(-n + 9),
-.panel.gray .prettyprint .linenums > li:nth-child(10),
-.panel.purple .prettyprint .linenums > li:nth-child(4),
-.panel.green .prettyprint .linenums > li:nth-child(n + 6):nth-child(-n + 10) {
-  background-color: #222;
-}
-
-.box {
-  width: 100px;
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-  background-color: white;
-  border-radius: 8px;
-  color: #222;
-  font-weight: 700;
-  margin-left: 20px;
-  will-change: transform;
-}
-.box.active {
-  background-color: orange;
-  border: 2px solid white;
+.glass {
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .description {
@@ -202,7 +115,7 @@ h2 {
   padding: 10px;
   min-height: 92vh;
   background: rgb(60,60,60);
-background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%);
+  background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%);
 }
 
 .final {
@@ -231,7 +144,6 @@ background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%)
 .bubble {
   --r: 1em;
   --t: 1.5em;
-  
   max-width: 300px;
   padding: 1em;
   border-inline: var(--t) solid #0000;
@@ -270,10 +182,49 @@ h1 code {
   margin-left: 1rem;
 }
 
-.gsap-marker-start, 
-.gsap-marker-end, 
-.gsap-marker-scroller-start, 
-.gsap-marker-scroller-end {
-  opacity: 0;
-}
+@media (max-width: 768px) {
+  .glass {
+    padding: 0.5rem;
+  }
 
+  .tech-stack {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .face-icon-container {
+    position: absolute !important;
+  }
+  .hero-section, .phone-copy-rights {
+    padding-top: 0 !important;
+  }
+  .text-container {
+    gap: 1rem !important; 
+  }
+  .phone-container {
+    max-width: 62% !important;
+  }
+  .border-gif {
+    border-radius: 30px !important;
+  }
+  .phone-font {
+    font-size: 1.5rem !important;
+  }
+  .phone-description {
+    font-size: 1rem !important;
+  }
+  h1 code {
+    font-size: 2rem !important;
+  }
+  .phone-paragraph {
+    margin-top: 1rem !important;
+  }
+  .skills-container {
+    padding-bottom: 0 !important;
+  }
+  .icon-container {
+    flex-wrap: nowrap !important;
+    height: 7rem !important;
+  }
+}

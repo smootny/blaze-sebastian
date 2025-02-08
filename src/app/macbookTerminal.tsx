@@ -66,11 +66,8 @@ export default function MacbookTerminal() {
       );
     }
   }, [activeTab]);
-
   return (
     <div className="w-full h-full max-h-1/2 max-w-5xl bg-gray-900 text-white rounded-lg shadow-lg p-4">
-
-
 <div className="flex flex-wrap md:flex-nowrap justify-around bg-gray-700 p-2 rounded-t-md glass font-orbitron">
   {Object.keys(skills).map((category) => (
     <button
@@ -84,7 +81,6 @@ export default function MacbookTerminal() {
     </button>
   ))}
 </div>
-
 <div className="p-6 h-auto md:h-64 flex justify-around justify-center gap-4 text-center items-center icon-container" ref={skillsIconsRef}>
   {skills[activeTab].map((skill) => (
     <div key={skill.name} className="flex flex-col items-center w-1/3 md:w-auto">
