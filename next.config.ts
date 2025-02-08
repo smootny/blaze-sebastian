@@ -1,9 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: "export",
   basePath: "/blaze-sebastian",
-  images: { unoptimized: true },
-  assetPrefix: "/blaze-sebastian/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
