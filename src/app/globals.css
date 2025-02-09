@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("/blaze-sebastian/tailwind.css"); 
-
 
 :root {
   --background: #ffffff;

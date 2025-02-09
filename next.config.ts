@@ -2,11 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/blaze-sebastian", // Change to match your GitHub repo name
+  basePath: "/blaze-sebastian",
   images: {
-    unoptimized: true, // Since GitHub Pages doesn't support Next.js image optimization
+    unoptimized: true,
   },
 };
 
 export default nextConfig;
-
