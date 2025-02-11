@@ -3,6 +3,70 @@
 @tailwind components;
 @tailwind utilities;
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: 30px 30px;
+  background-image: radial-gradient(#000bc34a 10%, #0000 20%);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.project1:before {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 30px 30px;
+    background-image: radial-gradient(#000bc34a 10%, #0000 20%);
+    z-index: -1;
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulseDots {
+  0% {
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+}
+
+/* body::before {
+  animation: pulseDots 5s infinite alternate ease-in-out;
+} */
+
+@keyframes moveDots {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body::before {
+    background-size: 30px 30px;
+    opacity: 0.2;
+  }
+}
+
 
 :root {
   --background: #ffffff;
@@ -17,7 +81,10 @@
 } 
 
 body {
-  background-color: #222;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0c1e;
   color: #ddd;
   font-size: 18px;
   line-height: 1.4;
@@ -57,25 +124,6 @@ h2 {
   font-size: 2rem;
 }
 
-.project1 {
-  background-color: #222A2D; /* Dark Blue-Grey */
-}
-
-.project2 {
-  background: rgb(60,60,60);
-  background: linear-gradient(270deg, rgba(60, 60, 60, 1) 11%, rgba(34, 42, 45, 1) 100%);
-}
-
-.project3 {
-  background: rgb(60,60,60);
-  background: linear-gradient(90deg, rgba(60, 60, 60, 1) 11%, rgba(34, 42, 45, 1) 100%);
-}
-
-.project4 {
-  background: rgb(60,60,60);
-  background: linear-gradient(270deg, rgba(60, 60, 60, 1) 11%, rgba(34, 42, 45, 1) 100%);
-}
-
 .tech-stack {
   display: flex;
   align-items: center;
@@ -111,8 +159,6 @@ h2 {
   align-items: center;
   padding: 10px;
   min-height: 96vh;
-  background: rgb(60,60,60);
-  background: linear-gradient(180deg, rgba(60,60,60,1) 11%, rgba(34,42,45,1) 100%);
 }
 
 .final {
@@ -122,8 +168,6 @@ h2 {
   padding: 10px;
   min-height: 96vh;
   width: 100vw;
-  background: rgb(60,60,60);
-  background: linear-gradient(270deg, rgba(60, 60, 60, 1) 11%, rgba(34, 42, 45, 1) 100%);
 }
 
 .border-gif {
