@@ -331,7 +331,7 @@ export default function Page() {
           )}
         </div>
 </div>
-  <p>Feel free to reach me out, you can download my resume in the left top corner! See you! 🤞</p>
+  <p className="glass">Feel free to reach me out, you can download my resume in the left top corner! See you! 🤞</p>
   <p className="font-alumni text-gray-400 py-4 text-md phone-copy-rights">
     &copy; 2025 Sebastian Blaze. <br />
     <code className="font-alumni">All rights reserved.</code>
