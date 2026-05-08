@@ -1,9 +1,10 @@
-"use client"; 
+"use client";
+
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MacbookTerminal from "./macbookTerminal";
+import MacbookTerminal from "./components/macbookTerminal";
 
 export default function Page() {
   const containerRef = useRef(null);
@@ -76,7 +77,7 @@ export default function Page() {
         <div className="tech-stack flex items-center justify-center py-6" ref={socialIconsRef}>
   <a href="https://www.linkedin.com/in/sebastian-b%C5%82a%C5%BCejewski/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="assets/images/linkedin.png" 
+      src="/blaze-sebastian/assets/images/linkedin.png" 
       alt="LinkedIn Profile"
       width={40}
       height={40}
@@ -86,7 +87,7 @@ export default function Page() {
 
   <a href="https://github.com/smootny/" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="assets/images/github.png" 
+      src="/blaze-sebastian/assets/images/github.png" 
       alt="GitHub Profile" 
       width={40}
       height={40}
@@ -96,7 +97,7 @@ export default function Page() {
 
   <a href="https://x.com/blazejewski_dev" target="_blank" rel="noopener noreferrer">
     <Image 
-      src="assets/images/twitter.png" 
+      src="/blaze-sebastian/assets/images/twitter.png" 
       alt="Twitter Profile"
       width={40}
       height={40}
@@ -109,200 +110,162 @@ export default function Page() {
       <div className="container" ref={containerRef}>
       <div className="container" ref={containerRef}>
   <section className="panel project1 flex items-center justify-center p-10">
-  <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
-      <h2 className="font-orbitron text-white text-4xl phone-font">Gaweloft Interiors</h2>
-      <code className="font-alumni text-black text-2xl font-bold phone-description">
-        Gaweloft - interior designer landing page for portfolio.
+    <div className="flex flex-col items-center justify-center text-center w-full max-w-5xl">
+      <h2 className="font-orbitron text-white text-5xl md:text-7xl phone-font uppercase">
+        SIDE PROJECTS
+      </h2>
+      <code className="font-alumni text-black text-2xl md:text-4xl font-bold phone-description mt-6">
+        Projects I actually build, maintain and use.
       </code>
-      <div className="tech-stack flex items-center gap-4"> 
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
-          alt="JavaScript"
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
-          alt="HTML5" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
-          alt="CSS3"
-          width={40}
-          height={40}
-          className="tech-icon"
+    </div>
+  </section>
+
+  <section className="panel project2 flex items-center justify-center p-10">
+    <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
+        <h2 className="font-orbitron text-white text-4xl phone-font">Training Tools</h2>
+
+        <code className="font-alumni text-black text-2xl font-bold phone-description">
+          Training Tools - simple tools for daily training and diet use.
+        </code>
+
+        <div className="tech-stack flex items-center gap-4">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            alt="Angular"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+            alt="CSS3"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+          <Image
+            className="code-img tech-icon transition-transform hover:scale-110 ml-10"
+            src="/blaze-sebastian/assets/images/kodQR.png"
+            alt="Code Button"
+            width={150}
+            height={150}
+          />
+        </div>
+
+        <div className="flex justify-center items-center gap-4 py-6">
+          <p className="font-orbitron">Source Code:</p>
+
+          <a
+            href="https://github.com/smootny/TrainingTools"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="code-img tech-icon transition-transform hover:scale-110"
+              src="/blaze-sebastian/assets/images/code.png"
+              alt="Code Button"
+              width={35}
+              height={35}
+            />
+          </a>
+      
+        </div>
+      </div>
+
+      <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container w-[350px] h-[650px] object-cover">
+        <Image
+          src="/blaze-sebastian/assets/gifs/flex_flow_freeze.gif"
+          alt="Training Tools preview"
+          width={350}
+          height={300}
+          className="rounded-lg shadow-lg border-gif"
         />
       </div>
-      <div className="flex justify-center items-center gap-4 py-6">
-      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/gaweloft" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="assets/images/code.png" alt="Code Button"  width={35}
-          height={35}/></a>
-      </div>    
     </div>
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
-      <Image
-        src="assets/gifs/gaweloft_page.gif"
-        alt="Drugi projekt"
-        width={350}
-        height={300}
-        className="rounded-lg shadow-lg border-gif"
-      />
-    </div>
-  </div>
-</section>
-<section className="panel project2 flex items-center justify-center p-10">
-  <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
-      <h2 className="font-orbitron text-white text-4xl phone-font">Who Pays?!</h2>
-      <code className="font-alumni text-black text-2xl font-bold phone-description">
-      Who Pays?! - a fun decision-making game.
-      </code>
-      <div className="tech-stack flex items-center gap-4">
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
-          alt="React" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
-          alt="HTML5" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
-          alt="CSS3"
-          width={40}
-          height={40}
-          className="tech-icon"
+  </section>
+
+  <section className="panel project3 flex items-center justify-center p-10">
+    <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
+        <h2 className="font-orbitron text-white text-4xl phone-font">Who Pays?!</h2>
+
+        <code className="font-alumni text-black text-2xl font-bold phone-description">
+          Who Pays?! - a fun decision-making game.
+        </code>
+
+        <div className="tech-stack flex items-center gap-4">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            alt="React"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+            alt="CSS3"
+            width={40}
+            height={40}
+            className="tech-icon"
+          />
+          <Image
+            className="code-img tech-icon transition-transform hover:scale-110 ml-10"
+            src="/blaze-sebastian/assets/images/kodQR2.png"
+            alt="Code Button"
+            width={150}
+            height={150}
+          />
+        </div>
+
+        <div className="flex justify-center items-center gap-4 py-6">
+          <p className="font-orbitron">Source Code:</p>
+
+          <a
+            href="https://github.com/smootny/WhoPays"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="code-img tech-icon transition-transform hover:scale-110"
+              src="/blaze-sebastian/assets/images/code.png"
+              alt="Code Button"
+              width={35}
+              height={35}
+            />
+          </a>
+        </div>
+      </div>
+
+      <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container w-[350px] h-[650px] object-cover">
+        <Image
+          src="/blaze-sebastian/assets/gifs/who_pays.gif"
+          alt="Who Pays preview"
+          width={350}
+          height={300}
+          className="rounded-lg shadow-lg border-gif"
         />
       </div>
-      <div className="flex justify-center items-center gap-4 py-6">
-      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/WhoPays" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="assets/images/code.png" alt="Code Button"  width={35}
-          height={35}/></a>
-      </div>    
     </div>
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
-      <Image
-        src="assets/gifs/who_pays.gif"
-        alt="Drugi projekt"
-        width={350}
-        height={300}
-        className="rounded-lg shadow-lg border-gif"
-      />
-    </div>
-  </div>
-</section>
-<section className="panel project3 flex items-center justify-center p-10">
-  <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
-      <h2 className="font-orbitron text-white text-4xl phone-font">Trening Tools</h2>
-      <code className="font-alumni text-black text-2xl font-bold phone-description">
-      Trening Tools - simple tools for daily training and diet use.
-      </code>
-      <div className="tech-stack flex items-center gap-4">
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-          alt="Angular" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" 
-          alt="HTML5" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-         <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
-          alt="HTML5" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
-          alt="CSS3"
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-      </div>
-      <div className="flex justify-center items-center gap-4 py-6">
-      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/FlexFlowFreeze" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="assets/images/code.png" alt="Code Button"  width={35}
-          height={35}/></a>
-      </div>    
-    </div>
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
-      <Image
-        src="assets/gifs/flex_flow_freeze.gif"
-        alt="Drugi projekt"
-        width={350}
-        height={300}
-        className="rounded-lg shadow-lg border-gif"
-      />
-    </div>
-  </div>
-</section>
-<section className="panel project4 flex items-center justify-center p-10">
-  <div className="flex flex-col md:flex-row items-center w-full max-w-5xl">
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:w-1/2 text-container">
-      <h2 className="font-orbitron text-white text-4xl phone-font">Trap Player</h2>
-      <code className="font-alumni text-black text-2xl font-bold phone-description">
-        Trap Player - Simple Ipod Classic design.
-      </code>
-      <div className="tech-stack flex items-center gap-4">
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
-          alt="React" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
-          alt="HTML5" 
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-        <Image 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
-          alt="CSS3"
-          width={40}
-          height={40}
-          className="tech-icon"
-        />
-      </div>
-      <div className="flex justify-center items-center gap-4 py-6">
-      <p className="font-orbitron">Source Code:</p> <a href="https://github.com/smootny/TrapPlayer" target="_blank" rel="noopener noreferrer">
-      <Image className="code-img tech-icon transition-transform hover:scale-110" src="assets/images/code.png" alt="Code Button"  width={35}
-          height={35}/></a>
-      </div>    
-    </div>
-    <div className="md:w-1/2 flex justify-center mt-6 md:mt-0 phone-container">
-      <Image
-        src="assets/gifs/trap_player.gif"
-        alt="Drugi projekt"
-        width={350}
-        height={300}
-        className="rounded-lg shadow-lg border-gif"
-      />
-    </div>
-  </div>
-</section>
+  </section>
 </div>
 </div>
       <div className="final flex flex-col items-end text-center gap-6 p-10">
@@ -313,7 +276,7 @@ export default function Page() {
   </div>
  <div className="fixed top-4 left-4 z-50 flex items-center face-icon-container">
   <Image 
-    src="assets/images/face.svg"
+    src="/blaze-sebastian/assets/images/face.svg"
     alt="Profile Icon"
     width={50}
     height={50}
@@ -323,7 +286,7 @@ export default function Page() {
           {isDownloaded ? (
             <p className="text-white font-semibold px-6 py-2">Thank you! 😊 🤙</p>
           ) : (
-            <a href="assets/files/sebastian_blazejewski.pdf" target="_blank" download onClick={() => setIsDownloaded(true)}>
+            <a href="/blaze-sebastian/assets/files/sebastian_blazejewski.pdf" target="_blank" download onClick={() => setIsDownloaded(true)}>
               <button className="glass text-black border border-gray-800 px-4 py-2 uppercase rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r from-black to-black shadow-lg hover:text-white">
                 Download CV 📄
               </button>
